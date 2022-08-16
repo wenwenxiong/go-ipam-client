@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  name: go-ipam-restful
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: go-ipam-restful
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        name: go-ipam-restful
+    spec:
+      containers:
+        - name: go-ipam-restful
+          image: xiongwen/go-ipam-restful:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 9111
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+        - name: go-ipam-server
+          args:
+            - redis
+          env:
+            - name: GOIPAM_LOG_LEVEL
+              value: debug
+            - name: GOIPAM_REDIS_HOST
+              value: redis-server
+            - name: GOIPAM_REDIS_PORT
+              value: 6379
+          image: xiongwen/go-ipam-server:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9090
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+      dnsPolicy: ClusterFirst
+      priorityClassName: system-node-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
