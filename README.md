@@ -57,7 +57,7 @@ kube-ipam->cloudinit secret->kubevirt vm
 
 白色框绿色字体的是需要自定义开发的组件。
 
-![子网IP管理架构](.\子网IP管理架构.png)
+![子网IP管理架构](子网IP管理架构.png)
 
 
 
