@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/wenwenxiong/go-ipam-client/cmd/app"
 	"log"
-	"wenwenxiong/go-ipam-client/cmd/app"
 )
 
 func main() {

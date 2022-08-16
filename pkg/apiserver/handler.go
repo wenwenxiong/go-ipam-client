@@ -2,8 +2,8 @@ package apiserver
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/wenwenxiong/go-ipam-client/pkg/client/goipam"
 	"net/http"
-	"wenwenxiong/go-ipam-client/pkg/client/goipam"
 )
 
 type handler struct {

@@ -1,4 +1,4 @@
-module wenwenxiong/go-ipam-client
+module github.com/wenwenxiong/go-ipam-client
 
 go 1.18
 

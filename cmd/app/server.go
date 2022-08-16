@@ -5,13 +5,13 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
+	"github.com/wenwenxiong/go-ipam-client/pkg/apiserver"
+	"github.com/wenwenxiong/go-ipam-client/pkg/client/goipam"
 	"net/http"
 	"runtime"
 	"strconv"
 	"strings"
 	"time"
-	"wenwenxiong/go-ipam-client/pkg/apiserver"
-	"wenwenxiong/go-ipam-client/pkg/client/goipam"
 )
 
 var (

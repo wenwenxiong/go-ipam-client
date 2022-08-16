@@ -2,7 +2,7 @@ package apiserver
 
 import (
 	"github.com/gin-gonic/gin"
-	"wenwenxiong/go-ipam-client/pkg/client/goipam"
+	"github.com/wenwenxiong/go-ipam-client/pkg/client/goipam"
 )
 
 func RegisterRoutes(router *gin.Engine, client goipam.Client) {

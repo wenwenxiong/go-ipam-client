@@ -2,12 +2,12 @@ package apiserver
 
 import (
 	"context"
+	"github.com/wenwenxiong/go-ipam-client/pkg/client/goipam"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"time"
-	"wenwenxiong/go-ipam-client/pkg/client/goipam"
 )
 
 type APIServer struct {
